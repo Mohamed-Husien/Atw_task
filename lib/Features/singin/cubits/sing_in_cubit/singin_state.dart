@@ -4,3 +4,9 @@ part of 'singin_cubit.dart';
 sealed class SinginState {}
 
 final class SinginInitial extends SinginState {}
+
+final class SinginInSuccess extends SinginState {}
+
+final class SinginInLoading extends SinginState {}
+
+final class SinginInFailure extends SinginState {}
