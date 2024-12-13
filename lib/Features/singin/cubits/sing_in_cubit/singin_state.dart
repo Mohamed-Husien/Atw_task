@@ -9,4 +9,8 @@ final class SinginInSuccess extends SinginState {}
 
 final class SinginInLoading extends SinginState {}
 
-final class SinginInFailure extends SinginState {}
+final class SinginInFailure extends SinginState {
+  final String erorrMessage;
+
+  SinginInFailure({required this.erorrMessage});
+}
