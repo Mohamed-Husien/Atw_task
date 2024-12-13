@@ -1,4 +1,4 @@
-import 'package:atw_task1_app/Features/singin/sing_in_body.dart';
+import 'package:atw_task1_app/Features/singin/widgets/sing_in_body.dart';
 import 'package:flutter/material.dart';
 
 class SingInView extends StatelessWidget {
