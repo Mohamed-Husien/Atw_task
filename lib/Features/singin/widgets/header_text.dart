@@ -15,6 +15,7 @@ class HeaderText extends StatelessWidget {
           style: TextStyle(
             color: Color(0xff2C385D),
             fontSize: 48,
+            fontWeight: FontWeight.bold,
           ),
         ),
         Text(
@@ -22,7 +23,7 @@ class HeaderText extends StatelessWidget {
           style: TextStyle(
             color: Color(0xff1B2B51),
             fontSize: 32,
-            fontWeight: FontWeight.w400,
+            fontWeight: FontWeight.bold,
           ),
         ),
         Text(
@@ -30,7 +31,7 @@ class HeaderText extends StatelessWidget {
           style: TextStyle(
             color: Color(0xff1B2B51),
             fontSize: 32,
-            fontWeight: FontWeight.w400,
+            fontWeight: FontWeight.bold,
           ),
         ),
       ],

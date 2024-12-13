@@ -20,9 +20,6 @@ class _SingInPartState extends State<SingInPart> {
   Widget build(BuildContext context) {
     return Padding(
       padding: EdgeInsets.only(
-        right: 24,
-        left: 24,
-        top: 24,
         bottom: MediaQuery.of(context).viewInsets.bottom,
       ),
       child: Form(
@@ -31,19 +28,21 @@ class _SingInPartState extends State<SingInPart> {
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisSize: MainAxisSize.min,
           children: [
+            const CustomFieldLabel(
+              text: 'Email',
+            ),
             CustomTextFormField(
               onChanged: (value) {
                 email = value;
               },
               validator: (value) => validateEmail(value),
-              hint: 'Email',
-              prefixIcon: const Icon(
-                Icons.email,
-                color: Color(0xff65656B),
-              ),
+              hint: 'Your Email',
             ),
             const SizedBox(height: 24),
             //---------------------------------------------
+            const CustomFieldLabel(
+              text: 'Email',
+            ),
             CustomTextFormField(
               onChanged: (value) {
                 password = value;
@@ -52,10 +51,6 @@ class _SingInPartState extends State<SingInPart> {
               obscureText: isSecurePassword,
               suffixIcon: toggalePassword(),
               hint: 'Password',
-              prefixIcon: const Icon(
-                Icons.key,
-                color: Color(0xff65656B),
-              ),
             ),
             //--------------------------------------------
             const SizedBox(height: 24),
@@ -100,6 +95,22 @@ class _SingInPartState extends State<SingInPart> {
               Icons.visibility,
               color: Colors.grey,
             ),
+    );
+  }
+}
+
+class CustomFieldLabel extends StatelessWidget {
+  const CustomFieldLabel({super.key, required this.text});
+  final String text;
+  @override
+  Widget build(BuildContext context) {
+    return Text(
+      text,
+      style: const TextStyle(
+        color: Color(0xff2C385D),
+        fontSize: 16,
+        fontWeight: FontWeight.bold,
+      ),
     );
   }
 }

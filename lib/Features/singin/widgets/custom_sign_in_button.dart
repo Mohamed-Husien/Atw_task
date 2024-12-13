@@ -8,23 +8,30 @@ class CustomButton extends StatelessWidget {
       {super.key,
       required this.onTap,
       this.width = 180,
-      this.text = "Sign In"});
+      this.text = "Sign in"});
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
       onTap: onTap,
       borderRadius: BorderRadius.circular(16),
-      // splashColor: kPrimaryColor,
+      splashColor: const Color(0xffA2A8B7),
       highlightColor: Colors.transparent,
       child: Container(
         height: 64,
         width: width,
         decoration: BoxDecoration(
-          // color: kPrimaryColor,
-          borderRadius: BorderRadius.circular(16),
+          color: const Color(0xff7F59E7),
+          borderRadius: BorderRadius.circular(8),
         ),
-        child: Center(child: Text(text)),
+        child: Center(
+            child: Text(
+          text,
+          style: const TextStyle(
+            color: Colors.white,
+            fontSize: 20,
+          ),
+        )),
       ),
     );
   }

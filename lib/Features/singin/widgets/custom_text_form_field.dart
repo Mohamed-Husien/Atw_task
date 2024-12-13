@@ -29,27 +29,27 @@ class CustomTextFormField extends StatelessWidget {
       onSaved: onSaved,
       validator: validator,
       maxLines: maxLines,
-      // cursorColor: kPrimaryColor,
+      cursorColor: const Color(0xffA2A8B7),
       style: const TextStyle(
-        color: Colors.white, // <-- Change text color to white
+        color: Colors.black, // <-- Change text color to white
       ),
       decoration: InputDecoration(
         border: buildBorder(),
-        enabledBorder: buildBorder(),
-        focusedBorder: buildBorder(),
+        enabledBorder: buildBorder(const Color(0xffD4D0EF)),
+        focusedBorder: buildBorder(const Color(0xffD4D0EF)),
         hintText: hint,
         suffixIcon: suffixIcon,
         prefixIcon: prefixIcon,
         hintStyle: const TextStyle(
-            // color: kPrimaryColor,
-            ),
+          color: Color(0xffA2A8B7),
+        ),
       ),
     );
   }
 
   OutlineInputBorder buildBorder([Color]) {
     return OutlineInputBorder(
-      borderRadius: BorderRadius.circular(16),
+      borderRadius: BorderRadius.circular(8),
       borderSide: BorderSide(
         color: Color ?? Colors.white,
       ),
