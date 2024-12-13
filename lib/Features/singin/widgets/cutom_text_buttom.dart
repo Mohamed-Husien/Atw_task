@@ -15,9 +15,9 @@ class CustomTextButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextButton(
         onPressed: onPressed,
-        child: const Text(
-          "Register",
-          style: TextStyle(
+        child: Text(
+          text,
+          style: const TextStyle(
             color: Color(0xff7A7C91),
           ),
         ));

@@ -1,7 +1,9 @@
 import 'package:atw_task1_app/Features/singin/helpers/validate_email.dart';
 import 'package:atw_task1_app/Features/singin/helpers/validate_password.dart';
+import 'package:atw_task1_app/Features/singin/widgets/custom_field_label.dart';
 import 'package:atw_task1_app/Features/singin/widgets/custom_sign_in_button.dart';
 import 'package:atw_task1_app/Features/singin/widgets/custom_text_form_field.dart';
+import 'package:atw_task1_app/Features/singin/widgets/cutom_text_buttom.dart';
 import 'package:flutter/material.dart';
 
 class SingInPart extends StatefulWidget {
@@ -26,7 +28,6 @@ class _SingInPartState extends State<SingInPart> {
         key: formKey,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
-          mainAxisSize: MainAxisSize.min,
           children: [
             const CustomFieldLabel(
               text: 'Email',
@@ -41,7 +42,7 @@ class _SingInPartState extends State<SingInPart> {
             const SizedBox(height: 24),
             //---------------------------------------------
             const CustomFieldLabel(
-              text: 'Email',
+              text: 'Password',
             ),
             CustomTextFormField(
               onChanged: (value) {
@@ -65,17 +66,20 @@ class _SingInPartState extends State<SingInPart> {
               },
             ),
             //-------------------------------------------------
-            const SizedBox(height: 24),
-            // const Row(
-            //   mainAxisAlignment: MainAxisAlignment.center,
-            //   children: [
-
-            //     CustomTextButton(text: "Sign Up"),
-            //     SizedBox(
-            //       height: 8,
-            //     )
-            //   ],
-            // ),
+            const SizedBox(height: 16),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                const Text("You don't have an account?"),
+                CustomTextButton(
+                  onPressed: () {},
+                  text: "Register",
+                ),
+                const SizedBox(
+                  height: 8,
+                )
+              ],
+            ),
           ],
         ),
       ),
@@ -95,22 +99,6 @@ class _SingInPartState extends State<SingInPart> {
               Icons.visibility,
               color: Colors.grey,
             ),
-    );
-  }
-}
-
-class CustomFieldLabel extends StatelessWidget {
-  const CustomFieldLabel({super.key, required this.text});
-  final String text;
-  @override
-  Widget build(BuildContext context) {
-    return Text(
-      text,
-      style: const TextStyle(
-        color: Color(0xff2C385D),
-        fontSize: 16,
-        fontWeight: FontWeight.bold,
-      ),
     );
   }
 }
