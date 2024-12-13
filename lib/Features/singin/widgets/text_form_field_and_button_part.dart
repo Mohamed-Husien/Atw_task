@@ -53,7 +53,7 @@ class _SingInPartState extends State<SingInPart> {
               hint: 'Password',
             ),
             //--------------------------------------------
-            const SizedBox(height: 24),
+            const SizedBox(height: 84),
             CustomButton(
               width: double.infinity,
               onTap: () {

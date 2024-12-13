@@ -17,6 +17,9 @@ class SingInBody extends StatelessWidget {
               height: 48,
             ),
             HeaderText(),
+            SizedBox(
+              height: 24,
+            ),
             SingInPart(),
           ],
         ),
