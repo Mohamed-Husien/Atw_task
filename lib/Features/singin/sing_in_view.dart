@@ -1,3 +1,4 @@
+import 'package:atw_task1_app/Features/singin/sing_in_body.dart';
 import 'package:flutter/material.dart';
 
 class SingInView extends StatelessWidget {
@@ -5,6 +6,9 @@ class SingInView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold();
+    return const Scaffold(
+      backgroundColor: Color(0xFFF3F3F3),
+      body: SingInBody(),
+    );
   }
 }
