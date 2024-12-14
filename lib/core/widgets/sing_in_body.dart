@@ -17,7 +17,7 @@ class SingInBody extends StatelessWidget {
               height: 48,
             ),
             HeaderText(
-              text1: "Let's Sing you in.",
+              text1: "Let's Sign you in.",
               text2: "Welcome back.",
               text3: "You'v been missed!",
             ),

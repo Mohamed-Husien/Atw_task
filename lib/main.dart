@@ -1,6 +1,6 @@
 import 'package:atw_task1_app/Features/register/cubits/cubit/register_cubit.dart';
-import 'package:atw_task1_app/Features/singin/cubits/sing_in_cubit/singin_cubit.dart';
-import 'package:atw_task1_app/Features/singin/view/sing_in_view.dart';
+import 'package:atw_task1_app/Features/signin/cubits/sing_in_cubit/singin_cubit.dart';
+import 'package:atw_task1_app/Features/signin/view/sign_in_view.dart';
 import 'package:atw_task1_app/firebase_options.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
@@ -25,12 +25,12 @@ class SignInApp extends StatelessWidget {
           create: (context) => RegisterCubit(),
         ),
         BlocProvider(
-          create: (context) => SinginCubit(),
+          create: (context) => SignInCubit(),
         ),
       ],
       child: const MaterialApp(
         debugShowCheckedModeBanner: false,
-        home: SingInView(),
+        home: SignInView(),
       ),
     );
   }

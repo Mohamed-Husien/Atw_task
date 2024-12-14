@@ -4,25 +4,24 @@ import 'package:meta/meta.dart';
 
 part 'singin_state.dart';
 
-class SinginCubit extends Cubit<SinginState> {
-  SinginCubit() : super(SinginInitial());
+class SignInCubit extends Cubit<SignInState> {
+  SignInCubit() : super(SignInitial());
   Future<void> loginUser(
       {required String email, required String password}) async {
-    emit(SinginInLoading());
+    emit(SignInLoading());
     try {
       await FirebaseAuth.instance
           .signInWithEmailAndPassword(email: email, password: password);
-      emit(SinginInSuccess());
+      emit(SignInSuccess());
     } on FirebaseAuthException catch (e) {
       if (e.code == 'user-not-found') {
-        emit(SinginInFailure(erorrMessage: 'No user found for that email.'));
+        emit(SignInFailure(erorrMessage: 'No user found for that email.'));
       } else if (e.code == 'wrong-password') {
-        emit(SinginInFailure(
+        emit(SignInFailure(
             erorrMessage: 'Wrong password provided for that user.'));
       }
     } catch (e) {
-      emit(SinginInFailure(
-          erorrMessage: 'There was an error please try again!'));
+      emit(SignInFailure(erorrMessage: 'There was an error please try again!'));
     }
   }
 }

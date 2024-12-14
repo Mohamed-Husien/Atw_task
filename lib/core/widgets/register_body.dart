@@ -17,7 +17,7 @@ class RegisterBody extends StatelessWidget {
               height: 48,
             ),
             HeaderText(
-              text1: "Let's Sing you up.",
+              text1: "Let's Sign you up.",
               text2: "Welcome back.",
               text3: "You'v been missed!",
             ),

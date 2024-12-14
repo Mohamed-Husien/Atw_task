@@ -1,5 +1,5 @@
 import 'package:atw_task1_app/Features/register/view/resgister_view.dart';
-import 'package:atw_task1_app/Features/singin/cubits/sing_in_cubit/singin_cubit.dart';
+import 'package:atw_task1_app/Features/signin/cubits/sing_in_cubit/singin_cubit.dart';
 import 'package:atw_task1_app/core/helpers/validate_email.dart';
 import 'package:atw_task1_app/core/helpers/validate_password.dart';
 import 'package:atw_task1_app/core/widgets/custom_field_label.dart';
@@ -63,7 +63,7 @@ class _SingInPartState extends State<SingInPart> {
               onTap: () {
                 if (formKey.currentState!.validate()) {
                   formKey.currentState!.save();
-                  BlocProvider.of<SinginCubit>(context)
+                  BlocProvider.of<SignInCubit>(context)
                       .loginUser(email: email!, password: password!);
                 } else {
                   autovalidateMode = AutovalidateMode.always;
