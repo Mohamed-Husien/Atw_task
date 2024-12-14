@@ -1,4 +1,3 @@
-import 'package:atw_task1_app/Features/register/view/resgister_view.dart';
 import 'package:atw_task1_app/core/helpers/validate_email.dart';
 import 'package:atw_task1_app/core/helpers/validate_password.dart';
 import 'package:atw_task1_app/core/widgets/custom_field_label.dart';
@@ -7,18 +6,19 @@ import 'package:atw_task1_app/core/widgets/custom_text_form_field.dart';
 import 'package:atw_task1_app/core/widgets/cutom_text_buttom.dart';
 import 'package:flutter/material.dart';
 
-class SingInPart extends StatefulWidget {
-  const SingInPart({super.key});
+class RegisterPart extends StatefulWidget {
+  const RegisterPart({super.key});
 
   @override
-  State<SingInPart> createState() => _SingInPartState();
+  State<RegisterPart> createState() => _RegisterPartState();
 }
 
-class _SingInPartState extends State<SingInPart> {
-  bool isSecurePassword = true;
-  final GlobalKey<FormState> formKey = GlobalKey();
-  AutovalidateMode autovalidateMode = AutovalidateMode.disabled;
-  String? password, email;
+bool isSecurePassword = true;
+final GlobalKey<FormState> formKey = GlobalKey();
+AutovalidateMode autovalidateMode = AutovalidateMode.disabled;
+String? password, email;
+
+class _RegisterPartState extends State<RegisterPart> {
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -57,6 +57,7 @@ class _SingInPartState extends State<SingInPart> {
             //--------------------------------------------
             const SizedBox(height: 84),
             CustomButton(
+              text: 'Register',
               width: double.infinity,
               onTap: () {
                 if (formKey.currentState!.validate()) {
@@ -71,19 +72,12 @@ class _SingInPartState extends State<SingInPart> {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                const Text("You don't have an account?"),
+                const Text("You already have an account?"),
                 CustomTextButton(
                   onPressed: () {
-                    Navigator.push(
-                      context,
-                      (MaterialPageRoute(
-                        builder: (context) {
-                          return const ResgisterView();
-                        },
-                      )),
-                    );
+                    Navigator.pop(context);
                   },
-                  text: "Register",
+                  text: "Sing In",
                 ),
                 const SizedBox(
                   height: 8,

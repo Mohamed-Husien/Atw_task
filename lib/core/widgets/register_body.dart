@@ -1,9 +1,9 @@
 import 'package:atw_task1_app/core/widgets/header_text.dart';
-import 'package:atw_task1_app/core/widgets/text_form_field_and_button_part.dart';
-import 'package:flutter/material.dart';
+import 'package:atw_task1_app/core/widgets/register_part.dart';
+import 'package:flutter/widgets.dart';
 
-class SingInBody extends StatelessWidget {
-  const SingInBody({super.key});
+class RegisterBody extends StatelessWidget {
+  const RegisterBody({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -17,14 +17,14 @@ class SingInBody extends StatelessWidget {
               height: 48,
             ),
             HeaderText(
-              text1: "Let's Sing you in.",
+              text1: "Let's Sing you up.",
               text2: "Welcome back.",
               text3: "You'v been missed!",
             ),
             SizedBox(
               height: 24,
             ),
-            SingInPart(),
+            RegisterPart()
           ],
         ),
       ),
