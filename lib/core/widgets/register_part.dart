@@ -1,3 +1,4 @@
+import 'package:atw_task1_app/Features/register/cubits/cubit/register_cubit.dart';
 import 'package:atw_task1_app/core/helpers/validate_email.dart';
 import 'package:atw_task1_app/core/helpers/validate_password.dart';
 import 'package:atw_task1_app/core/widgets/custom_field_label.dart';
@@ -5,6 +6,7 @@ import 'package:atw_task1_app/core/widgets/custom_sign_in_button.dart';
 import 'package:atw_task1_app/core/widgets/custom_text_form_field.dart';
 import 'package:atw_task1_app/core/widgets/cutom_text_buttom.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class RegisterPart extends StatefulWidget {
   const RegisterPart({super.key});
@@ -62,6 +64,8 @@ class _RegisterPartState extends State<RegisterPart> {
               onTap: () {
                 if (formKey.currentState!.validate()) {
                   formKey.currentState!.save();
+                  BlocProvider.of<RegisterCubit>(context)
+                      .createUserMethod(email: email!, password: password!);
                 } else {
                   autovalidateMode = AutovalidateMode.always;
                 }
