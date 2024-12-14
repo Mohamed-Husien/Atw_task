@@ -16,7 +16,7 @@ class SingInView extends StatelessWidget {
         if (state is SinginInLoading) {
           isLoading = true;
         } else if (state is SinginInSuccess) {
-          showSnachBarFun(context, 'Sing indone successfully');
+          showSnachBarFun(context, 'Sing in done successfully');
           isLoading = false;
         } else if (state is SinginInFailure) {
           showSnachBarFun(context, state.erorrMessage);
