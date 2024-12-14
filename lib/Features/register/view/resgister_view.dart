@@ -6,10 +6,11 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
 
 class ResgisterView extends StatelessWidget {
-  ResgisterView({super.key});
-  bool isLoading = false;
+  const ResgisterView({super.key});
+
   @override
   Widget build(BuildContext context) {
+    bool isLoading = false;
     return BlocConsumer<RegisterCubit, RegisterState>(
       listener: (context, state) {
         if (state is RegisterLoading) {
