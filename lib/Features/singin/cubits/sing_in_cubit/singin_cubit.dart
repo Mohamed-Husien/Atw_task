@@ -10,7 +10,7 @@ class SinginCubit extends Cubit<SinginState> {
       {required String email, required String password}) async {
     emit(SinginInLoading());
     try {
-      final credential = await FirebaseAuth.instance
+      await FirebaseAuth.instance
           .signInWithEmailAndPassword(email: email, password: password);
       emit(SinginInSuccess());
     } on FirebaseAuthException catch (e) {
