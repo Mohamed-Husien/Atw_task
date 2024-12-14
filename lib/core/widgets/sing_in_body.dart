@@ -1,5 +1,5 @@
-import 'package:atw_task1_app/Features/singin/widgets/header_text.dart';
-import 'package:atw_task1_app/Features/singin/widgets/text_form_field_and_button_part.dart';
+import 'package:atw_task1_app/core/widgets/header_text.dart';
+import 'package:atw_task1_app/core/widgets/text_form_field_and_button_part.dart';
 import 'package:flutter/material.dart';
 
 class SingInBody extends StatelessWidget {
